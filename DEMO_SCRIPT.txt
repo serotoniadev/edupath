@@ -1,0 +1,56 @@
+🎙️ EduPath — Hackathon Demo Video Script (2-3 Minutes)
+======================================================
+
+[Visual: Show the EduPath GitHub repository or a beautiful title card with "EduPath: AI Learning Roadmaps"]
+
+0:00 - INTRODUCTION & PITCH
+----------------------------
+"Hi everyone! Today, I’m excited to show you EduPath—a personalized AI learning roadmap generator built with the Google Agent Development Kit for the 'Agents for Good' track.
+
+Traditional learning is one-size-fits-all. EduPath changes that by using a collaborative team of AI agents and custom tools to build tailored, structured learning journeys based on your background, goals, and schedule."
+
+[Visual: Screen recording transitions to the ADK Playground UI at http://localhost:18081]
+
+0:25 - THE PLAYGROUND & NORMAL PATHWAY
+--------------------------------------
+"Let’s start a new session. We’ll input our profile. I want to learn Python Programming, my level is beginner, my goal is to build a web scraper, and I have 10 hours a week to study. 
+
+When I click submit, the ADK workflow starts. Under the hood, it first routes through a Security Checkpoint to verify input safety. Once passed, the Educational Orchestrator delegates to a specialized Skill Evaluator agent."
+
+[Visual: Zoom in on the terminal output/logs or the green workflow graph nodes lighting up]
+
+0:55 - MCP TOOLS & SYSTEM DECISIONS
+-----------------------------------
+"The evaluator uses custom Model Context Protocol—or MCP—tools like 'calculate_study_schedule' to determine how long it will take, and 'get_learning_tips' to pull cognitive strategies. 
+
+Since our input looks good, it routes automatically to the Curriculum Planner agent, which uses our 'search_courses' MCP tool to find high-quality resources on Coursera, Udemy, and edX."
+
+[Visual: Scroll down the output showing the generated markdown roadmap]
+
+1:20 - THE RESULT: A PERSONALIZED SYLLABUS
+------------------------------------------
+"And here is our customized 8-week Python web scraping roadmap! It includes weekly topics, concrete exercises, links to courses, and learning tips specific to beginners. Everything is structured perfectly using Pydantic output schemas."
+
+[Visual: Start a new session in the playground]
+
+1:40 - HUMAN-IN-THE-LOOP (TUTOR INTERRUPT)
+------------------------------------------
+"But what if a student has an unrealistic plan? Let’s input 'learning goals: master advanced machine learning' with only '2 hours a week'. 
+
+Because the hours are too low for such a complex subject, the workflow automatically pauses at the Human Approval node. It waits for teacher feedback. As a tutor, I can type 'Focus on linear regression first' and hit resume. The workflow picks right back up, incorporates my feedback, and builds the roadmap!"
+
+[Visual: Start another session in the playground]
+
+2:15 - SECURITY & GUARDRAILS
+----------------------------
+"Finally, safety is critical. Let’s try to input: 'learning goals: cheat on my math exam'. 
+
+Instantly, the security checkpoint intercepts the request, runs our PII and academic integrity regex checks, prints an audit log to stderr, routes to the fail handler, and displays a friendly security warning—safely ending the workflow with no crashes."
+
+[Visual: Return to the title card or show the github repo link]
+
+2:45 - OUTRO
+------------
+"By combining security, specialized agent collaboration, custom MCP services, and human-in-the-loop validation, EduPath provides a safe, personalized tutor for students worldwide. 
+
+Thank you, and we hope you enjoy exploring EduPath!"

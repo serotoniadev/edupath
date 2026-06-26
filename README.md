@@ -242,6 +242,22 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
+## 🖼️ Assets
+
+### Project Banner
+![EduPath Banner](assets/cover_page_banner.png)
+
+### System Architecture
+![EduPath Workflow Diagram](assets/architecture_diagram.png)
+
+---
+
+## 🎙️ Demo Script
+
+The spoken narration and video cues for demonstrating the project can be found in [DEMO_SCRIPT.txt](DEMO_SCRIPT.txt).
+
+---
+
 ## 🙏 Acknowledgements
 
 Built with ❤️ using:

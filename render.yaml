@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: edupath
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.agent_runtime_app:agent_runtime --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GOOGLE_GENAI_USE_VERTEXAI
+        value: "False"
+      - key: GEMINI_MODEL
+        value: gemini-3.1-flash-lite
